@@ -1,0 +1,11 @@
+# compose version
+version: "3"
+ 
+services: 
+  app:
+    build: . # dockerFile location
+    command: npm start # command to execute after run app on docker
+    ports:
+      - "3000:3000"
+    volumes: # Which port will be monitoring from/to
+      - .:/usr/app
